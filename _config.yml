@@ -5,7 +5,7 @@
 # Site
 title: Burdock winner
 subtitle: Record for Front End Engineer.
-description:
+description: Burdock winnerは、デザイン会社でコーディングを主に担当しているおのてつやが、勉強したもののメモやその他興味があることをちゃかり公開しているウェブサイトです。もともと趣味で始めたWebサイト作りが仕事になりました。全て独学で学んできたため、間違った情報などがあるかもしれません。
 keywords:
 author: Tetsuya Ono
 language: ja
@@ -62,7 +62,7 @@ tag_map:
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY/MM/DD
+date_format: YYYY年MMMDo
 time_format: HH:mm:ss
 
 # Pagination
@@ -79,10 +79,3 @@ theme: cactus
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
-
-html_minifier:
-  removeComments: true
-  collapseBooleanAttributes: true
-  removeEmptyAttributes: true
-  removeScriptTypeAttributes: true
-  removeStyleLinkTypeAttributes: true
