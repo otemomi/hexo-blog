@@ -50,8 +50,5 @@
     <% if (theme.rss) { %>
       <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml" />
     <% } %>
-    <!-- amp -->
-    <% if (is_post() && config.generator_amp){ %>
-      <link rel="amphtml" href="<%= config.url %><%= config.root %><%= page.path %>/amp/index.html">
-    <% } %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700&display=swap&subset=japanese" rel="stylesheet">
 </head>

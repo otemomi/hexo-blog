@@ -79,3 +79,10 @@ theme: cactus
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+html_minifier:
+  removeComments: true
+  collapseBooleanAttributes: true
+  removeEmptyAttributes: true
+  removeScriptTypeAttributes: true
+  removeStyleLinkTypeAttributes: true
