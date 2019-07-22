@@ -2,20 +2,39 @@
 <html<%= config.language ? " lang=" + config.language.substring(0, 2) : ""%>>
 <%- partial('_partial/head') %>
 <body class="max-width mx-auto px3 <%- theme.direction -%>">
-    <% if (is_post()) { %>
-      <%- partial('_partial/post/actions_desktop') %>
-    <% } %>
-    <div class="content index py4">
-        <% if (!is_post()) { %>
-          <%- partial('_partial/header') %>
-        <% } %>
-        <%- body %>
-        <% if (is_post()) { %>
-          <%- partial('_partial/post/actions_mobile') %>
-        <% } %>
-        <%- partial('_partial/footer') %>
-    </div>
-    <%- partial('_partial/styles') %>
-    <%- partial('_partial/scripts') %>
+	<!--
+	<% if (is_post()) { %>
+		<%- partial('_partial/post/actions_desktop') %>
+	<% } %>
+	-->
+
+	<header class="nav">
+		<ul>
+			<li class="nav--title"><a href="<%- url_for("/") %>"><%= config.title %></a></li>
+			<% for (var i in theme.nav) { %>
+				<li><a href="<%- url_for(theme.nav[i]) %>"><%= __('nav.'+i).replace("nav.", "") %></a></li>
+			<% } %>
+			<% if (page.prev) { %>
+				<li><a class="icon" href="<%- url_for(page.prev.path) %>"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+			<% } %>
+				<li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+			<% if (page.next) { %>
+				<li><a class="icon" href="<%- url_for(page.next.path) %>"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+			<% } %>
+			</ul>
+	</header>
+
+	<div class="content index py4">
+		<% if (!is_post()) { %>
+			<%- partial('_partial/header') %>
+		<% } %>
+		<%- body %>
+		<% if (is_post()) { %>
+			<%- partial('_partial/post/actions_mobile') %>
+		<% } %>
+		<%- partial('_partial/footer') %>
+	</div>
+	<%- partial('_partial/styles') %>
+	<%- partial('_partial/scripts') %>
 </body>
 </html>

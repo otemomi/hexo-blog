@@ -1,5 +1,4 @@
 <header id="header">
-  <a href="<%- url_for("/") %>">
   <% if (theme.logo && theme.logo.enabled) { %>
     <% if (theme.gravatar && theme.gravatar.email && theme.logo.gravatar) { %>
       <div id="logo" style="background-image: url(<%- gravatar(theme.gravatar.email) %>);"></div>
@@ -8,17 +7,14 @@
     <% } %>
   <% } %>
     <div id="title">
-      <h1><%= config.title %></h1>
+      <h1>Introduction of <%= config.author %></h1>
+      <p class="meta">詳細は<a href="<%- url_for("/about") %>">このサイトについて</a>を確認してくだい。</p>
     </div>
-  </a>
   <div id="nav">
     <ul>
       <li class="icon">
         <a href="#"><i class="fas fa-bars fa-2x"></i></a>
       </li>
-      <% for (var i in theme.nav) { %> 
-        <li><a href="<%- url_for(theme.nav[i]) %>"><%= __('nav.'+i).replace("nav.", "") %></a></li>
-      <% } %>
     </ul>
   </div>
 </header>

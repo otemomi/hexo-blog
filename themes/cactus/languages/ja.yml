@@ -1,11 +1,11 @@
 nav:
-  home: Home
-  about: About
-  articles: Archives
-  tag: Tag
-  category: Category
-  projects: Projects
-  search: Search
+  home: 最初のページ
+  about: このサイトについて
+  articles: 雑記一覧
+  tag: タグ
+  category: カテゴリー
+  projects: 勉強進捗度 ★=10％
+  search: 検索
 
 footer:
   copyright: Copyright
@@ -14,8 +14,8 @@ index:
   find_me_on: Find me on
   enum_comma: ','
   enum_and: and
-  articles: Writing
-  projects: Projects
+  articles: 雑記
+  projects: 勉強進捗度 ★=10％
   topics: Topics
   most_recent: Most recent
 
