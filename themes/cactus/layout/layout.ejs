@@ -25,9 +25,6 @@
 	</header>
 
 	<div class="content index py4">
-		<% if (!is_post()) { %>
-			<%- partial('_partial/header') %>
-		<% } %>
 		<%- body %>
 		<% if (is_post()) { %>
 			<%- partial('_partial/post/actions_mobile') %>
